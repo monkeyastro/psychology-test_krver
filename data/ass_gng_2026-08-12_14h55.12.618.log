@@ -1,0 +1,90 @@
+12.2695 	WARNING 	User requested fullscreen with size [1440  900], but screen is actually [2880, 1800]. Using actual size
+15.0485 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=True, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000023CA3095600>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000023CA3095660>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1, -1, -1]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000023CA3097040>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000023CA3365870>, multiSample=False, name='window1', numSamples=2, pos=(-2880, 0), screen=0, size=array([2880, 1800]), stencilBits=8, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+15.0487 	EXP 	window1: mouseVisible = True
+15.0487 	EXP 	window1: backgroundImage = ''
+15.0487 	EXP 	window1: backgroundFit = 'none'
+15.0504 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+15.0504 	EXP 	window1: recordFrameIntervals = False
+15.1903 	EXP 	window1: recordFrameIntervals = True
+15.2346 	WARNING 	t of last frame was 10.82ms (=1/92)
+15.3246 	EXP 	Screen (0) actual frame rate measured at 119.29Hz
+15.3246 	EXP 	window1: recordFrameIntervals = False
+15.3248 	EXP 	window1: mouseVisible = False
+17.4493 	EXP 	gng: status = STARTED
+17.4498 	EXP 	window1: mouseVisible = True
+17.4501 	EXP 	window1: mouseVisible = True
+17.4506 	EXP 	window1: mouseVisible = True
+17.4509 	EXP 	window1: mouseVisible = True
+17.9132 	EXP 	window1: mouseVisible = True
+17.9134 	EXP 	window1: mouseVisible = True
+17.9137 	EXP 	window1: mouseVisible = True
+17.9140 	EXP 	window1: mouseVisible = True
+17.9171 	EXP 	window1: mouseVisible = True
+17.9233 	EXP 	Created go_example = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, image=str(...), interpolate=True, mask=None, maskParams=None, name='go_example', opacity=1.0, ori=0.0, pos=array([0.6, 0.1]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+17.9234 	EXP 	window1: mouseVisible = True
+17.9269 	EXP 	Created nogo_example = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, image=str(...), interpolate=True, mask=None, maskParams=None, name='nogo_example', opacity=1.0, ori=0.0, pos=array([ 0.6, -0.1]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+17.9269 	EXP 	window1: mouseVisible = True
+17.9309 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image=str(...), interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.2, 0.2]), texRes=128.0, units='height', win=Window(...))
+17.9313 	EXP 	window1: mouseVisible = True
+17.9316 	EXP 	window1: mouseVisible = True
+17.9320 	EXP 	window1: mouseVisible = True
+17.9323 	EXP 	window1: mouseVisible = True
+17.9351 	EXP 	window1: mouseVisible = True
+17.9351 	EXP 	window1: mouseVisible = True
+17.9354 	EXP 	window1: mouseVisible = True
+17.9357 	EXP 	window1: mouseVisible = True
+17.9380 	EXP 	window1: mouseVisible = True
+17.9382 	EXP 	window1: mouseVisible = True
+17.9394 	EXP 	window1: mouseVisible = True
+17.9396 	EXP 	window1: mouseVisible = True
+17.9420 	EXP 	window1: mouseVisible = True
+17.9421 	EXP 	window1: mouseVisible = True
+17.9424 	EXP 	window1: mouseVisible = True
+17.9426 	EXP 	window1: mouseVisible = True
+0.0037 	EXP 	introtxt: autoLog = True
+0.0037 	EXP 	fbtxt: autoLog = True
+0.0037 	EXP 	textbox: autoLog = True
+0.0258 	EXP 	introtxt: autoDraw = True
+0.0258 	EXP 	go_example: autoDraw = True
+0.0258 	EXP 	nogo_example: autoDraw = True
+0.9813 	EXP 	trialSeed = 1145810947
+0.9813 	EXP 	측정된 프레임률: 119.29 Hz
+0.9813 	WARNING 	모니터 주사율이 60Hz가 아닙니다 (119.29 Hz). 자극 제시 시간이 프레임 단위로 반올림됩니다.
+0.9896 	EXP 	Imported C:\Users\kitech\PycharmProjects\korean_gonogo\conditions.xlsx as conditions, 4 conditions, 2 params
+0.9901 	EXP 	Created sequence: random, trialTypes=4, nReps=10, seed=1145810947
+0.9903 	EXP 	New trial (rep=0, index=0): {'this_image': 'go.png', 'corr_ans': 'space'}
+0.9960 	EXP 	introtxt: autoDraw = False
+0.9960 	EXP 	go_example: autoDraw = False
+0.9960 	EXP 	nogo_example: autoDraw = False
+0.9960 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+0.9960 	EXP 	image: autoDraw = True
+0.9980 	DATA 	Keypress: s
+1.7326 	EXP 	image: autoDraw = False
+1.7326 	EXP 	fbtxt: autoDraw = True
+1.7353 	DATA 	Keypress: space
+2.2204 	EXP 	New trial (rep=0, index=1): {'this_image': 'go.png', 'corr_ans': 'space'}
+2.2285 	EXP 	fbtxt: autoDraw = False
+2.2285 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+2.2285 	EXP 	image: autoDraw = True
+2.7848 	DATA 	Keypress: space
+2.7873 	EXP 	image: autoDraw = False
+2.7873 	EXP 	fbtxt: autoDraw = True
+3.2799 	EXP 	New trial (rep=0, index=2): {'this_image': 'nogo.png', 'corr_ans': None}
+3.2870 	EXP 	fbtxt: autoDraw = False
+3.2870 	EXP 	fbtxt: autoDraw = False
+3.2870 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\nogo.png'
+3.2870 	EXP 	image: autoDraw = True
+3.6968 	EXP 	image: autoDraw = False
+3.6968 	EXP 	fbtxt: autoDraw = True
+3.6983 	DATA 	Keypress: space
+4.1871 	EXP 	New trial (rep=0, index=3): {'this_image': 'go.png', 'corr_ans': 'space'}
+4.1950 	EXP 	fbtxt: autoDraw = False
+4.1950 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+4.1950 	EXP 	image: autoDraw = True
+4.3569 	DATA 	Mouse: Left button down, pos=(1941,627)
+4.4808 	DATA 	Mouse:  Left button up, pos=(1941,627)
+4.7135 	DATA 	Keypress: escape
+4.7890 	EXP 	gng: status = STOPPED
+4.7950 	EXP 	image: autoDraw = False
+4.7953 	EXP 	gng: status = STOPPED
+7.0674 	EXP 	window1: mouseVisible = True

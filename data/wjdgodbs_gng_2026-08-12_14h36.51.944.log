@@ -1,0 +1,370 @@
+6.2742 	WARNING 	User requested fullscreen with size [1440  900], but screen is actually [2880, 1800]. Using actual size
+8.8668 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=True, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001F2C6B14790>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001F2C6B145E0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1, -1, -1]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001F2C6B17340>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001F2EE3E9A50>, multiSample=False, name='window1', numSamples=2, pos=(-2880, 0), screen=0, size=array([2880, 1800]), stencilBits=8, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+8.8669 	EXP 	window1: mouseVisible = True
+8.8669 	EXP 	window1: backgroundImage = ''
+8.8669 	EXP 	window1: backgroundFit = 'none'
+8.8679 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+8.8679 	EXP 	window1: recordFrameIntervals = False
+8.9586 	EXP 	window1: recordFrameIntervals = True
+9.0508 	EXP 	Screen (0) actual frame rate measured at 121.46Hz
+9.0508 	EXP 	window1: recordFrameIntervals = False
+9.0510 	EXP 	window1: mouseVisible = False
+10.9518 	EXP 	gng: status = STARTED
+10.9522 	EXP 	window1: mouseVisible = True
+10.9524 	EXP 	window1: mouseVisible = True
+10.9527 	EXP 	window1: mouseVisible = True
+10.9530 	EXP 	window1: mouseVisible = True
+13.0465 	EXP 	window1: mouseVisible = True
+13.0717 	EXP 	window1: mouseVisible = True
+13.1070 	EXP 	window1: mouseVisible = True
+13.1281 	EXP 	window1: mouseVisible = True
+13.1389 	EXP 	window1: mouseVisible = True
+13.1517 	EXP 	Created go_example = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, image=str(...), interpolate=True, mask=None, maskParams=None, name='go_example', opacity=1.0, ori=0.0, pos=array([0.6, 0.1]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+13.1601 	EXP 	window1: mouseVisible = True
+13.1684 	EXP 	Created nogo_example = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, image=str(...), interpolate=True, mask=None, maskParams=None, name='nogo_example', opacity=1.0, ori=0.0, pos=array([ 0.6, -0.1]), size=array([0.1, 0.1]), texRes=128.0, units='height', win=Window(...))
+13.1765 	EXP 	window1: mouseVisible = True
+13.1867 	EXP 	Created image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image=str(...), interpolate=True, mask=None, maskParams=None, name='image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.2, 0.2]), texRes=128.0, units='height', win=Window(...))
+13.1952 	EXP 	window1: mouseVisible = True
+13.2034 	EXP 	window1: mouseVisible = True
+13.2090 	EXP 	window1: mouseVisible = True
+13.2297 	EXP 	window1: mouseVisible = True
+13.2379 	EXP 	window1: mouseVisible = True
+13.2416 	EXP 	window1: mouseVisible = True
+13.2437 	EXP 	window1: mouseVisible = True
+13.2473 	EXP 	window1: mouseVisible = True
+13.2584 	EXP 	window1: mouseVisible = True
+13.2588 	EXP 	window1: mouseVisible = True
+13.2618 	EXP 	window1: mouseVisible = True
+13.2625 	EXP 	window1: mouseVisible = True
+13.2682 	EXP 	window1: mouseVisible = True
+13.2684 	EXP 	window1: mouseVisible = True
+13.2688 	EXP 	window1: mouseVisible = True
+13.2700 	EXP 	window1: mouseVisible = True
+0.0206 	EXP 	introtxt: autoLog = True
+0.0206 	EXP 	fbtxt: autoLog = True
+0.0206 	EXP 	textbox: autoLog = True
+0.0892 	EXP 	introtxt: autoDraw = True
+0.0892 	EXP 	go_example: autoDraw = True
+0.0892 	EXP 	nogo_example: autoDraw = True
+7.7389 	EXP 	trialSeed = 1110179521
+7.7389 	EXP 	측정된 프레임률: 121.46 Hz
+7.7389 	WARNING 	모니터 주사율이 60Hz가 아닙니다 (121.46 Hz). 자극 제시 시간이 프레임 단위로 반올림됩니다.
+7.7465 	EXP 	Imported C:\Users\kitech\PycharmProjects\korean_gonogo\conditions.xlsx as conditions, 4 conditions, 2 params
+7.7470 	EXP 	Created sequence: random, trialTypes=4, nReps=10, seed=1110179521
+7.7472 	EXP 	New trial (rep=0, index=0): {'this_image': 'go.png', 'corr_ans': 'space'}
+7.7500 	DATA 	Keypress: s
+7.7529 	EXP 	introtxt: autoDraw = False
+7.7529 	EXP 	go_example: autoDraw = False
+7.7529 	EXP 	nogo_example: autoDraw = False
+7.7529 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+7.7529 	EXP 	image: autoDraw = True
+9.2045 	DATA 	Keypress: space
+9.2089 	EXP 	image: autoDraw = False
+9.2089 	EXP 	fbtxt: autoDraw = True
+9.6946 	EXP 	New trial (rep=0, index=1): {'this_image': 'go.png', 'corr_ans': 'space'}
+9.7023 	EXP 	fbtxt: autoDraw = False
+9.7023 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+9.7023 	EXP 	image: autoDraw = True
+10.1598 	DATA 	Keypress: space
+10.1624 	EXP 	image: autoDraw = False
+10.1624 	EXP 	fbtxt: autoDraw = True
+10.6613 	EXP 	New trial (rep=0, index=2): {'this_image': 'go.png', 'corr_ans': 'space'}
+10.6690 	EXP 	fbtxt: autoDraw = False
+10.6690 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+10.6690 	EXP 	image: autoDraw = True
+11.0527 	EXP 	image: autoDraw = False
+11.0527 	EXP 	fbtxt: autoDraw = True
+11.0545 	DATA 	Keypress: space
+11.5453 	EXP 	New trial (rep=0, index=3): {'this_image': 'nogo.png', 'corr_ans': None}
+11.5527 	EXP 	fbtxt: autoDraw = False
+11.5527 	EXP 	fbtxt: autoDraw = False
+11.5527 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\nogo.png'
+11.5527 	EXP 	image: autoDraw = True
+13.5528 	EXP 	image: autoDraw = False
+13.5528 	EXP 	image: autoDraw = False
+13.5528 	EXP 	fbtxt: autoDraw = True
+14.0450 	EXP 	New trial (rep=1, index=0): {'this_image': 'go.png', 'corr_ans': 'space'}
+14.0525 	EXP 	fbtxt: autoDraw = False
+14.0525 	EXP 	fbtxt: autoDraw = False
+14.0525 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+14.0525 	EXP 	image: autoDraw = True
+14.5439 	EXP 	image: autoDraw = False
+14.5439 	EXP 	fbtxt: autoDraw = True
+14.5464 	DATA 	Keypress: space
+15.0370 	EXP 	New trial (rep=1, index=1): {'this_image': 'nogo.png', 'corr_ans': None}
+15.0446 	EXP 	fbtxt: autoDraw = False
+15.0446 	EXP 	fbtxt: autoDraw = False
+15.0446 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\nogo.png'
+15.0446 	EXP 	image: autoDraw = True
+17.0440 	EXP 	image: autoDraw = False
+17.0440 	EXP 	image: autoDraw = False
+17.0440 	EXP 	fbtxt: autoDraw = True
+17.5367 	EXP 	New trial (rep=1, index=2): {'this_image': 'go.png', 'corr_ans': 'space'}
+17.5450 	EXP 	fbtxt: autoDraw = False
+17.5450 	EXP 	fbtxt: autoDraw = False
+17.5450 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+17.5450 	EXP 	image: autoDraw = True
+18.0773 	EXP 	image: autoDraw = False
+18.0773 	EXP 	fbtxt: autoDraw = True
+18.0790 	DATA 	Keypress: space
+18.5704 	EXP 	New trial (rep=1, index=3): {'this_image': 'go.png', 'corr_ans': 'space'}
+18.5776 	EXP 	fbtxt: autoDraw = False
+18.5776 	EXP 	fbtxt: autoDraw = False
+18.5776 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+18.5776 	EXP 	image: autoDraw = True
+18.9855 	EXP 	image: autoDraw = False
+18.9855 	EXP 	fbtxt: autoDraw = True
+18.9873 	DATA 	Keypress: space
+19.4786 	EXP 	New trial (rep=2, index=0): {'this_image': 'go.png', 'corr_ans': 'space'}
+19.4858 	EXP 	fbtxt: autoDraw = False
+19.4858 	EXP 	fbtxt: autoDraw = False
+19.4858 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+19.4858 	EXP 	image: autoDraw = True
+19.8939 	EXP 	image: autoDraw = False
+19.8939 	EXP 	fbtxt: autoDraw = True
+19.8966 	DATA 	Keypress: space
+20.3870 	EXP 	New trial (rep=2, index=1): {'this_image': 'nogo.png', 'corr_ans': None}
+20.3940 	EXP 	fbtxt: autoDraw = False
+20.3940 	EXP 	fbtxt: autoDraw = False
+20.3940 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\nogo.png'
+20.3940 	EXP 	image: autoDraw = True
+22.3940 	EXP 	image: autoDraw = False
+22.3940 	EXP 	image: autoDraw = False
+22.3940 	EXP 	fbtxt: autoDraw = True
+22.8866 	EXP 	New trial (rep=2, index=2): {'this_image': 'go.png', 'corr_ans': 'space'}
+22.8939 	EXP 	fbtxt: autoDraw = False
+22.8939 	EXP 	fbtxt: autoDraw = False
+22.8939 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+22.8939 	EXP 	image: autoDraw = True
+23.4357 	EXP 	image: autoDraw = False
+23.4357 	EXP 	fbtxt: autoDraw = True
+23.4381 	DATA 	Keypress: space
+23.9284 	EXP 	New trial (rep=2, index=3): {'this_image': 'go.png', 'corr_ans': 'space'}
+23.9354 	EXP 	fbtxt: autoDraw = False
+23.9354 	EXP 	fbtxt: autoDraw = False
+23.9354 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+23.9354 	EXP 	image: autoDraw = True
+24.3288 	EXP 	image: autoDraw = False
+24.3288 	EXP 	fbtxt: autoDraw = True
+24.3313 	DATA 	Keypress: space
+24.8281 	EXP 	New trial (rep=3, index=0): {'this_image': 'nogo.png', 'corr_ans': None}
+24.8355 	EXP 	fbtxt: autoDraw = False
+24.8355 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\nogo.png'
+24.8355 	EXP 	image: autoDraw = True
+26.8362 	EXP 	image: autoDraw = False
+26.8362 	EXP 	fbtxt: autoDraw = True
+27.3279 	EXP 	New trial (rep=3, index=1): {'this_image': 'go.png', 'corr_ans': 'space'}
+27.3360 	EXP 	fbtxt: autoDraw = False
+27.3360 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+27.3360 	EXP 	image: autoDraw = True
+27.9194 	EXP 	image: autoDraw = False
+27.9194 	EXP 	fbtxt: autoDraw = True
+27.9220 	DATA 	Keypress: space
+28.4115 	EXP 	New trial (rep=3, index=2): {'this_image': 'go.png', 'corr_ans': 'space'}
+28.4189 	EXP 	fbtxt: autoDraw = False
+28.4189 	EXP 	fbtxt: autoDraw = False
+28.4189 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+28.4189 	EXP 	image: autoDraw = True
+28.7188 	EXP 	image: autoDraw = False
+28.7188 	EXP 	fbtxt: autoDraw = True
+28.7205 	DATA 	Keypress: space
+29.2114 	EXP 	New trial (rep=3, index=3): {'this_image': 'go.png', 'corr_ans': 'space'}
+29.2194 	EXP 	fbtxt: autoDraw = False
+29.2194 	EXP 	fbtxt: autoDraw = False
+29.2194 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+29.2194 	EXP 	image: autoDraw = True
+29.5521 	EXP 	image: autoDraw = False
+29.5521 	EXP 	fbtxt: autoDraw = True
+29.5543 	DATA 	Keypress: space
+30.0446 	EXP 	New trial (rep=4, index=0): {'this_image': 'go.png', 'corr_ans': 'space'}
+30.0524 	EXP 	fbtxt: autoDraw = False
+30.0524 	EXP 	fbtxt: autoDraw = False
+30.0524 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+30.0524 	EXP 	image: autoDraw = True
+30.5271 	EXP 	image: autoDraw = False
+30.5271 	EXP 	fbtxt: autoDraw = True
+30.5298 	DATA 	Keypress: space
+31.0201 	EXP 	New trial (rep=4, index=1): {'this_image': 'go.png', 'corr_ans': 'space'}
+31.0270 	EXP 	fbtxt: autoDraw = False
+31.0270 	EXP 	fbtxt: autoDraw = False
+31.0270 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+31.0270 	EXP 	image: autoDraw = True
+31.5438 	EXP 	image: autoDraw = False
+31.5438 	EXP 	fbtxt: autoDraw = True
+31.5459 	DATA 	Keypress: space
+32.0368 	EXP 	New trial (rep=4, index=2): {'this_image': 'go.png', 'corr_ans': 'space'}
+32.0442 	EXP 	fbtxt: autoDraw = False
+32.0442 	EXP 	fbtxt: autoDraw = False
+32.0442 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+32.0442 	EXP 	image: autoDraw = True
+32.3881 	EXP 	image: autoDraw = False
+32.3881 	EXP 	fbtxt: autoDraw = True
+32.3899 	DATA 	Keypress: space
+32.8865 	EXP 	New trial (rep=4, index=3): {'this_image': 'nogo.png', 'corr_ans': None}
+32.8950 	EXP 	fbtxt: autoDraw = False
+32.8950 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\nogo.png'
+32.8950 	EXP 	image: autoDraw = True
+34.8940 	EXP 	image: autoDraw = False
+34.8940 	EXP 	fbtxt: autoDraw = True
+35.2964 	DATA 	Keypress: space
+35.3862 	EXP 	New trial (rep=5, index=0): {'this_image': 'go.png', 'corr_ans': 'space'}
+35.3942 	EXP 	fbtxt: autoDraw = False
+35.3942 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+35.3942 	EXP 	image: autoDraw = True
+36.2626 	EXP 	image: autoDraw = False
+36.2626 	EXP 	fbtxt: autoDraw = True
+36.2660 	DATA 	Keypress: space
+36.7612 	EXP 	New trial (rep=5, index=1): {'this_image': 'go.png', 'corr_ans': 'space'}
+36.7692 	EXP 	fbtxt: autoDraw = False
+36.7692 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+36.7692 	EXP 	image: autoDraw = True
+37.1948 	EXP 	image: autoDraw = False
+37.1948 	EXP 	fbtxt: autoDraw = True
+37.1989 	DATA 	Keypress: space
+37.6871 	EXP 	New trial (rep=5, index=2): {'this_image': 'nogo.png', 'corr_ans': None}
+37.6937 	EXP 	fbtxt: autoDraw = False
+37.6937 	EXP 	fbtxt: autoDraw = False
+37.6937 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\nogo.png'
+37.6937 	EXP 	image: autoDraw = True
+39.6941 	EXP 	image: autoDraw = False
+39.6941 	EXP 	image: autoDraw = False
+39.6941 	EXP 	fbtxt: autoDraw = True
+40.1861 	EXP 	New trial (rep=5, index=3): {'this_image': 'go.png', 'corr_ans': 'space'}
+40.1940 	EXP 	fbtxt: autoDraw = False
+40.1940 	EXP 	fbtxt: autoDraw = False
+40.1940 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+40.1940 	EXP 	image: autoDraw = True
+40.6862 	EXP 	image: autoDraw = False
+40.6862 	EXP 	fbtxt: autoDraw = True
+40.6884 	DATA 	Keypress: space
+41.1785 	EXP 	New trial (rep=6, index=0): {'this_image': 'go.png', 'corr_ans': 'space'}
+41.1855 	EXP 	fbtxt: autoDraw = False
+41.1855 	EXP 	fbtxt: autoDraw = False
+41.1855 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+41.1855 	EXP 	image: autoDraw = True
+41.6684 	EXP 	image: autoDraw = False
+41.6684 	EXP 	fbtxt: autoDraw = True
+41.6716 	DATA 	Keypress: space
+42.1618 	EXP 	New trial (rep=6, index=1): {'this_image': 'nogo.png', 'corr_ans': None}
+42.1691 	EXP 	fbtxt: autoDraw = False
+42.1691 	EXP 	fbtxt: autoDraw = False
+42.1691 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\nogo.png'
+42.1691 	EXP 	image: autoDraw = True
+44.1688 	EXP 	image: autoDraw = False
+44.1688 	EXP 	image: autoDraw = False
+44.1688 	EXP 	fbtxt: autoDraw = True
+44.6618 	EXP 	New trial (rep=6, index=2): {'this_image': 'go.png', 'corr_ans': 'space'}
+44.6690 	EXP 	fbtxt: autoDraw = False
+44.6690 	EXP 	fbtxt: autoDraw = False
+44.6690 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+44.6690 	EXP 	image: autoDraw = True
+44.9948 	EXP 	image: autoDraw = False
+44.9948 	EXP 	fbtxt: autoDraw = True
+44.9968 	DATA 	Keypress: space
+45.4868 	EXP 	New trial (rep=6, index=3): {'this_image': 'go.png', 'corr_ans': 'space'}
+45.4942 	EXP 	fbtxt: autoDraw = False
+45.4942 	EXP 	fbtxt: autoDraw = False
+45.4942 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+45.4942 	EXP 	image: autoDraw = True
+45.8273 	EXP 	image: autoDraw = False
+45.8273 	EXP 	fbtxt: autoDraw = True
+45.8292 	DATA 	Keypress: space
+46.3201 	EXP 	New trial (rep=7, index=0): {'this_image': 'go.png', 'corr_ans': 'space'}
+46.3276 	EXP 	fbtxt: autoDraw = False
+46.3276 	EXP 	fbtxt: autoDraw = False
+46.3276 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+46.3276 	EXP 	image: autoDraw = True
+46.6859 	EXP 	image: autoDraw = False
+46.6859 	EXP 	fbtxt: autoDraw = True
+46.6876 	DATA 	Keypress: space
+47.1782 	EXP 	New trial (rep=7, index=1): {'this_image': 'nogo.png', 'corr_ans': None}
+47.1861 	EXP 	fbtxt: autoDraw = False
+47.1861 	EXP 	fbtxt: autoDraw = False
+47.1861 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\nogo.png'
+47.1861 	EXP 	image: autoDraw = True
+49.1858 	EXP 	image: autoDraw = False
+49.1858 	EXP 	image: autoDraw = False
+49.1858 	EXP 	fbtxt: autoDraw = True
+49.6781 	EXP 	New trial (rep=7, index=2): {'this_image': 'go.png', 'corr_ans': 'space'}
+49.6857 	EXP 	fbtxt: autoDraw = False
+49.6857 	EXP 	fbtxt: autoDraw = False
+49.6857 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+49.6857 	EXP 	image: autoDraw = True
+50.1707 	EXP 	image: autoDraw = False
+50.1707 	EXP 	fbtxt: autoDraw = True
+50.1742 	DATA 	Keypress: space
+50.6694 	EXP 	New trial (rep=7, index=3): {'this_image': 'go.png', 'corr_ans': 'space'}
+50.6777 	EXP 	fbtxt: autoDraw = False
+50.6777 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+50.6777 	EXP 	image: autoDraw = True
+51.0864 	EXP 	image: autoDraw = False
+51.0864 	EXP 	fbtxt: autoDraw = True
+51.0886 	DATA 	Keypress: space
+51.5793 	EXP 	New trial (rep=8, index=0): {'this_image': 'nogo.png', 'corr_ans': None}
+51.5858 	EXP 	fbtxt: autoDraw = False
+51.5858 	EXP 	fbtxt: autoDraw = False
+51.5858 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\nogo.png'
+51.5858 	EXP 	image: autoDraw = True
+53.5852 	EXP 	image: autoDraw = False
+53.5852 	EXP 	image: autoDraw = False
+53.5852 	EXP 	fbtxt: autoDraw = True
+54.0777 	EXP 	New trial (rep=8, index=1): {'this_image': 'go.png', 'corr_ans': 'space'}
+54.0854 	EXP 	fbtxt: autoDraw = False
+54.0854 	EXP 	fbtxt: autoDraw = False
+54.0854 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+54.0854 	EXP 	image: autoDraw = True
+54.5858 	EXP 	image: autoDraw = False
+54.5858 	EXP 	fbtxt: autoDraw = True
+54.5876 	DATA 	Keypress: space
+55.0784 	EXP 	New trial (rep=8, index=2): {'this_image': 'go.png', 'corr_ans': 'space'}
+55.0856 	EXP 	fbtxt: autoDraw = False
+55.0856 	EXP 	fbtxt: autoDraw = False
+55.0856 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+55.0856 	EXP 	image: autoDraw = True
+55.5408 	DATA 	Keypress: space
+55.5447 	EXP 	image: autoDraw = False
+55.5447 	EXP 	fbtxt: autoDraw = True
+56.0370 	EXP 	New trial (rep=8, index=3): {'this_image': 'go.png', 'corr_ans': 'space'}
+56.0440 	EXP 	fbtxt: autoDraw = False
+56.0440 	EXP 	fbtxt: autoDraw = False
+56.0440 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+56.0440 	EXP 	image: autoDraw = True
+56.3865 	EXP 	image: autoDraw = False
+56.3865 	EXP 	fbtxt: autoDraw = True
+56.3897 	DATA 	Keypress: space
+56.8868 	EXP 	New trial (rep=9, index=0): {'this_image': 'nogo.png', 'corr_ans': None}
+56.8944 	EXP 	fbtxt: autoDraw = False
+56.8944 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\nogo.png'
+56.8944 	EXP 	image: autoDraw = True
+58.8940 	EXP 	image: autoDraw = False
+58.8940 	EXP 	fbtxt: autoDraw = True
+59.3868 	EXP 	New trial (rep=9, index=1): {'this_image': 'go.png', 'corr_ans': 'space'}
+59.3944 	EXP 	fbtxt: autoDraw = False
+59.3944 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+59.3944 	EXP 	image: autoDraw = True
+59.8106 	EXP 	image: autoDraw = False
+59.8106 	EXP 	fbtxt: autoDraw = True
+59.8129 	DATA 	Keypress: space
+60.3037 	EXP 	New trial (rep=9, index=2): {'this_image': 'go.png', 'corr_ans': 'space'}
+60.3111 	EXP 	fbtxt: autoDraw = False
+60.3111 	EXP 	fbtxt: autoDraw = False
+60.3111 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+60.3111 	EXP 	image: autoDraw = True
+60.6864 	EXP 	image: autoDraw = False
+60.6864 	EXP 	fbtxt: autoDraw = True
+60.6883 	DATA 	Keypress: space
+61.1783 	EXP 	New trial (rep=9, index=3): {'this_image': 'go.png', 'corr_ans': 'space'}
+61.1858 	EXP 	fbtxt: autoDraw = False
+61.1858 	EXP 	fbtxt: autoDraw = False
+61.1858 	EXP 	image: image = 'C:\\Users\\kitech\\PycharmProjects\\korean_gonogo\\go.png'
+61.1858 	EXP 	image: autoDraw = True
+61.6441 	EXP 	image: autoDraw = False
+61.6441 	EXP 	fbtxt: autoDraw = True
+61.6462 	DATA 	Keypress: space
+62.2734 	EXP 	fbtxt: autoDraw = False
+62.2734 	EXP 	fbtxt: autoDraw = False
+62.2734 	EXP 	textbox: autoDraw = True
+105.2774 	EXP 	textbox: autoDraw = False
+105.2777 	EXP 	gng: status = STOPPED
+105.2977 	DATA 	Keypress: space
+107.3978 	EXP 	window1: mouseVisible = True

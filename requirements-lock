@@ -1,0 +1,107 @@
+# Go/No-Go 한국어 로컬판 — 환경 고정 파일
+# 대상: Windows x64 / Python 3.10.11 (64-bit)
+#
+# [설치 순서] 아래 3단계를 반드시 이 순서대로.
+#   py -3.10 -m venv .venv
+#   .venv\Scripts\activate
+#   python -m pip install "pip==24.0" "setuptools==66.1.1" "wheel"
+#   pip install -r requirements-lock.txt
+#   pip install --no-deps psychopy==2023.2.3
+#
+# psychopy 본체는 반드시 --no-deps 로 마지막에 설치할 것.
+# 이유: 2023.2.3이 선언한 pypi-search 패키지가 PyPI에서 삭제되어
+#       일반 pip install 은 의존성 해석 단계에서 실패한다.
+#       (psychopy/psychopy#7384)
+
+# ===== 절대 변경 금지 =====
+pyglet==1.4.11          # Windows 전용 고정. PsychoPy 전 버전이 이 값으로 핀.
+                        # 1.5.x 올리면 창 생성/flip 타이밍이 깨진다.
+psychtoolbox==3.0.19.14 # ptb 키보드 = RT 측정의 핵심. 3.0.20+ 는 비호환.
+                        # 2023.2.3은 핀이 없어 최신이 딸려오므로 직접 고정.
+numpy==1.26.4           # numpy 2.x 는 psychopy 2023.x 와 비호환.
+                        # 2023.2.3은 핀이 없으므로 직접 고정.
+
+# ===== 실험 실행 필수 =====
+scipy==1.10.1
+pandas==2.0.3
+matplotlib==3.7.5
+pillow==10.4.0
+openpyxl==3.1.5         # conditions.xlsx 로드
+questplus==2023.1
+xmlschema==2.5.1
+requests==2.32.3
+future==1.0.0
+packaging==24.1
+
+# ----- TextBox2 한글 렌더링 필수 -----
+freetype-py==2.4.0
+python-bidi==0.4.2
+arabic-reshaper==3.0.0
+
+# ----- 참가자 정보 대화상자 (gui.DlgFromDict) -----
+PyQt6==6.6.1
+PyQt6-Qt6==6.6.1
+PyQt6-sip==13.6.0
+
+# ----- 사운드 스택 (psychopy import 시 로드됨. 본 실험은 소리 미사용) -----
+soundfile==0.12.1
+
+# ----- Windows 플랫폼 -----
+pypiwin32==223
+pywin32==306
+
+# ==========================================================================
+# iohub 스택 — 제거 금지
+# ==========================================================================
+# gng.psyexp 의 keyboardBackend='ioHub' 설정에 따라 원본은 iohub 로 RT를 잰다.
+# Keyboard._backend 가 클래스 속성이라, setupInputs 에서 iohub 로 고정되면
+# 이후 만들어지는 key_resp 도 iohub 경로를 쓴다.
+# 이 스택을 빼면 RT 측정 계측기가 ptb 로 바뀌어 원본과 다른 실험이 된다.
+gevent==23.9.1
+psutil==5.9.8
+pyzmq==25.1.2
+ujson==5.9.0
+msgpack==1.0.7
+msgpack-numpy==0.4.8
+pyyaml==6.0.1
+tables==3.8.0           # numpy<2 필요. 위 numpy 핀과 세트.
+pywinhook==1.6.2        # Windows 키보드 훅. 설치 실패 시 아래 참고.
+
+
+# ==========================================================================
+# 의도적으로 제외한 패키지 — 설치하지 말 것
+# ==========================================================================
+#
+# (iohub 스택은 위에 포함되어 있다. 제거 금지.)
+#
+# [Builder/Coder 앱]  wxPython, markdown-it-py
+#   → GUI 편집기용. exe 실행에는 불필요. 용량만 수백 MB 증가.
+#
+# [Pavlovia 연동]  python-gitlab, gitpython, cryptography
+# [JS 변환]        javascripthon, astunparse, esprima, jedi
+#   → 온라인 실험 배포용. 로컬 exe 에는 불필요.
+#
+# [동영상 백엔드]  opencv-python, ffpyplayer, python-vlc,
+#                  imageio, imageio-ffmpeg, moviepy
+#   → 본 실험은 정지 이미지(go.png/nogo.png)만 사용.
+#     단, psychopy import 시 경고가 뜰 수 있으나 동작에 지장 없음.
+#
+# [하드웨어]  pyserial, pyparallel
+#   → 외부 트리거 장비 미사용.
+#
+# [삭제된 패키지]  pypi-search
+#   → PyPI 에서 제거됨. --no-deps 설치로 우회.
+#
+# [setuptools]
+#   → 2023.2.3은 setuptools<=66.1.1 을 요구. 최신 pip(25.x)는 이와 충돌하므로
+#     pip==24.0 + setuptools==66.1.1 조합으로 고정해야 한다.
+
+
+# ==========================================================================
+# pywinhook 설치가 실패할 경우
+# ==========================================================================
+# cp310 휠이 없으면 소스 빌드를 시도하며 swig / MSVC 빌드 도구를 요구한다.
+#   1) Microsoft C++ Build Tools 설치 후 재시도
+#   2) 그래도 안 되면 비공식 휠(.whl) 을 받아 직접 설치
+#   3) pywinhook 없이도 iohub 키보드는 대체 경로로 동작할 수 있으나,
+#      그 경우 반드시 타이밍 검증을 다시 수행할 것
