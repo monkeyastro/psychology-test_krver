@@ -49,6 +49,64 @@ import sys  # to get file system encoding
 
 import psychopy.iohub as io
 from psychopy.hardware import keyboard
+# --- NIRSIT 이벤트 마커 (LAN) ---
+# 프레임 루프를 절대 블로킹하지 않는다. 전송은 워커 스레드에서만.
+import socket, threading, queue, time
+
+NIRSIT_HOST = '192.168.0.10'   # ★ NIRSIT SCAN PC IP — 확인 필요
+NIRSIT_PORT = 1234             # ★ 포트 — 확인 필요
+_mk_q = queue.Queue()
+_mk_sock = None
+_mk_thread = None
+
+def _mk_worker():
+    while True:
+        code = _mk_q.get()
+        if code is None:
+            break
+        try:
+            _mk_sock.sendall(str(code).encode())
+        except Exception as e:
+            logging.error('마커 전송 실패 %s: %s' % (code, e))
+        time.sleep(0.3)   # 워커 스레드 안. 프레임 타이밍과 무관.
+
+def openMarkerPort(expInfo):
+    global _mk_sock, _mk_thread
+    if str(expInfo.get('with_socket', '0')) != '1':
+        logging.exp('마커 전송 비활성 (with_socket=0)')
+        return
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.settimeout(3.0)
+        s.connect((NIRSIT_HOST, NIRSIT_PORT))
+        s.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
+        _mk_sock = s
+        _mk_thread = threading.Thread(target=_mk_worker, daemon=True)
+        _mk_thread.start()
+        logging.exp('NIRSIT 연결됨 %s:%d' % (NIRSIT_HOST, NIRSIT_PORT))
+    except Exception as e:
+        _mk_sock = None
+        logging.critical('NIRSIT 연결 실패, 마커 없이 진행합니다: %s' % e)
+
+def sendMarker(code):
+    """프레임 루프/callOnFlip에서 호출 가능. 논블로킹."""
+    if _mk_sock is not None:
+        try:
+            _mk_q.put_nowait(code)
+        except Exception:
+            pass
+
+def closeMarkerPort():
+    global _mk_sock
+    if _mk_sock is not None:
+        _mk_q.put(None)
+        if _mk_thread is not None:
+            _mk_thread.join(timeout=2.0)
+        try:
+            _mk_sock.close()
+        except Exception:
+            pass
+        _mk_sock = None
 
 # --- Setup global variables (available in all functions) ---
 # 실행 기준 폴더: exe로 패키징된 경우 exe 옆, 스크립트 실행이면 스크립트 옆
@@ -107,6 +165,7 @@ expInfo = {
     'date': data.getDateStr(),  # add a simple timestamp
     'expName': expName,
     'psychopyVersion': psychopyVersion,
+    'with_socket': '0'
 }
 
 
@@ -676,6 +735,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for paramName in thisTrial:
             globals()[paramName] = thisTrial[paramName]
 
+    sendMarker(8888)
+
     for thisTrial in trials:
         currentLoop = trials
         thisExp.timestampOnFlip(win, 'thisRow.t')
@@ -737,6 +798,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 win.timeOnFlip(image, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'image.started')
+                win.callOnFlip(sendMarker, 1111)
                 # update status
                 image.status = STARTED
                 image.setAutoDraw(True)
@@ -842,6 +904,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # store data for trials (TrialHandler)
         trials.addData('key_resp.keys', key_resp.keys)
         trials.addData('key_resp.corr', key_resp.corr)
+        trials.addData('marker.sent', 1111)
         if key_resp.keys != None:  # we had a response
             trials.addData('key_resp.rt', key_resp.rt)
             trials.addData('key_resp.duration', key_resp.duration)
@@ -992,6 +1055,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     t = 0
     _timeToFirstFrame = win.getFutureFlipTime(clock="now")
     frameN = -1
+    sendMarker(9999)
 
     # --- Run Routine "end" ---
     routineForceEnded = not continueRoutine
@@ -1145,6 +1209,7 @@ def quit(thisExp, win=None, inputs=None, thisSession=None):
     if inputs is not None:
         if 'eyetracker' in inputs and inputs['eyetracker'] is not None:
             inputs['eyetracker'].setConnectionState(False)
+    closeMarkerPort()
     logging.flush()
     if thisSession is not None:
         thisSession.stop()
@@ -1160,6 +1225,7 @@ if __name__ == '__main__':
     logFile = setupLogging(filename=thisExp.dataFileName)
     win = setupWindow(expInfo=expInfo)
     inputs = setupInputs(expInfo=expInfo, thisExp=thisExp, win=win)
+    openMarkerPort(expInfo)
     run(
         expInfo=expInfo,
         thisExp=thisExp,
