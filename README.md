@@ -1,5 +1,4 @@
-Go/No-Go 과제 — 한국어 로컬판 (gng_ko.py)
-
+Go/No-Go 과제 — 한국어 로컬판
 원본: PsychoPy3 Builder v2023.2.3 산출물 (gng_lastrun.py, 2023-12-13)
 
 정본 기준: gng.js (nReps=10, 자극 0.2, 예시 아이콘 ±0.1)
