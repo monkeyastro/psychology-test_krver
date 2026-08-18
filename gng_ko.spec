@@ -48,6 +48,16 @@ excludes = [
     'tkinter', 'IPython', 'pytest', 'jedi',
     'cv2', 'ffpyplayer', 'moviepy',  # 동영상 백엔드 미사용
     'psychopy.app',                  # Coder/Builder 앱
+     # 이 실험에 불필요 — 분석 시간과 용량의 주범
+    'psychopy.demos',
+    'psychopy.tests',
+    'psychopy.monitors.MonitorCenter',
+    'psychopy.visual.rift',
+    'psychopy.visual.movie', 'psychopy.visual.movie2', 'psychopy.visual.movie3',
+    'psychopy.visual.vlcmoviestim',
+    'psychopy.hardware.emotiv',
+    'PyQt5', 'PyQt6', 'PySide2', 'PySide6',
+    'xarray', 'xmlschema',
 ]
 
 a = Analysis(

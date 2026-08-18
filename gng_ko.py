@@ -453,14 +453,14 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # --- Initialize components for Routine "intro" ---
     introtxt = visual.TextBox2(
         win,
-        text='화면에 체크 표시가 나타나면\n스페이스바를 누르세요.\n\n엑스 표시가 나타나면\n아무것도 누르지 마세요.\n\n최대한 빠르고 정확하게 반응해 주세요.\n\n준비가 되면 S키를 눌러 시작하세요.',
+        text='화면에 체크 표시가 나타나면 스페이스바를 누르세요.\n\n엑스 표시가 나타나면 아무것도 누르지 마세요.\n\n최대한 빠르고 정확하게 반응해 주세요.\n\n준비가 되면 S 키를 눌러 시작하세요.',
         placeholder='', font=KO_FONT,
         pos=(0, 0), letterHeight=0.055,
-        size=(1.5, 1), borderWidth=2.0,
+        size=(1, 0.5), borderWidth=2.0,
         color='white', colorSpace='rgb',
         opacity=None,
         bold=False, italic=False,
-        lineSpacing=2.0, speechPoint=None,
+        lineSpacing=1.0, speechPoint=None,
         padding=0.0, alignment='center',
         anchor='center', overflow='visible',
         fillColor=None, borderColor=None,
@@ -474,7 +474,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         win=win,
         name='go_example',
         image=GO_IMAGE, mask=None, anchor='center',
-        ori=0.0, pos=(0.6, 0.1), size=(0.15, 0.15),
+        ori=0.0, pos=(0.6, 0.1), size=(0.1, 0.1),
         color=[1, 1, 1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-2.0)
@@ -482,7 +482,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         win=win,
         name='nogo_example',
         image=NOGO_IMAGE, mask=None, anchor='center',
-        ori=0.0, pos=(0.6, -0.1), size=(0.15, 0.15),
+        ori=0.0, pos=(0.6, -0.1), size=(0.1, 0.1),
         color=[1, 1, 1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-3.0)
@@ -492,7 +492,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         win=win,
         name='image',
         image=GO_IMAGE, mask=None, anchor='center',
-        ori=0.0, pos=(0, 0), size=(0.5, 0.5),
+        ori=0.0, pos=(0, 0), size=(0.2, 0.2),
         color=[1, 1, 1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=0.0)
