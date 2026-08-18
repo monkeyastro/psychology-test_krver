@@ -737,6 +737,45 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
 
     sendMarker(8888)
 
+    # --- 시작 카운트다운 (원본에 없는 추가 구간 · 문서화 대상) ---
+    # 목적 1) 인트로에서 S키를 누른 직후 첫 자극이 뜨는 것을 막는다.
+    #      2) 한글 IME / 키 입력 지연을 흡수한다.
+    #      3) nogo 텍스처를 미리 GPU 에 올려 첫 NoGo 시행의 프레임 지연을 없앤다.
+    #      4) 8888 마커의 워커 대기(0.3s)가 첫 시행 1111 마커를 밀지 않게 한다.
+    # 측정 알고리즘 무관: 시행 루프 진입 전에 종료되며 routineTimer 를 리셋한다.
+    COUNTDOWN_SEC = 5
+
+    counttxt = visual.TextStim(
+        win, name='counttxt', text='',
+        font=KO_FONT, pos=(0, 0), height=0.15,
+        color='white', colorSpace='rgb',
+        anchorHoriz='center', anchorVert='center')
+
+    # NoGo 텍스처 사전 업로드 (setImage 시점에 GPU 전송이 일어난다)
+    image.setImage(NOGO_IMAGE)
+    image.setImage(GO_IMAGE)
+
+    logging.exp('countdown 시작 (%d초)' % COUNTDOWN_SEC)
+    _cdClock = core.Clock()
+    win.callOnFlip(_cdClock.reset)
+    _cdLast = None
+    while _cdClock.getTime() < COUNTDOWN_SEC:
+        _cdRemain = COUNTDOWN_SEC - int(_cdClock.getTime())  # 5,4,3,2,1
+        if _cdRemain != _cdLast:
+            counttxt.setText(str(_cdRemain))
+            _cdLast = _cdRemain
+        counttxt.draw()
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, inputs=inputs, win=win)
+            return
+        win.flip()
+    win.flip()  # 카운트다운 화면을 지운 상태로 첫 시행에 진입
+    logging.exp('countdown 종료, 첫 시행 진입')
+    routineTimer.reset()
+
     for thisTrial in trials:
         currentLoop = trials
         thisExp.timestampOnFlip(win, 'thisRow.t')
